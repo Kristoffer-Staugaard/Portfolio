@@ -4,6 +4,7 @@ import Mission from './components/Mission';
 import Projects from './components/Projects';
 import Services from './components/Services';
 import About from './components/About';
+import './styles/FooterCta.scss';
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
         <Projects />
         <Services />
         <About />
-        
+
         {/* Footer CTA */}
         <section className="footer-cta">
           <h2>

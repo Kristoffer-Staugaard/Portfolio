@@ -1,4 +1,5 @@
 import { Framer, Figma, Code, Layout } from 'lucide-react';
+import '../styles/Projects.scss';
 
 export default function Projects() {
   return (
@@ -38,8 +39,8 @@ export default function Projects() {
           <button className="info-btn">Info</button>
         </div>
         <div className="card-content bg-neutral-900">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
-               alt="Bio" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%) contrast(125%)' }} />
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+            alt="Bio" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'grayscale(100%) contrast(125%)' }} />
         </div>
       </div>
 
@@ -57,9 +58,9 @@ export default function Projects() {
             <button className="info-btn">Info</button>
           </div>
           <div className="card-content bg-neutral-900">
-             <div style={{ width: '4.5rem', height: '4.5rem', borderRadius: '50%', overflow: 'hidden', border: '3px solid #222' }}>
-                <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=300&q=80" alt="Album Art" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-             </div>
+            <div style={{ width: '4.5rem', height: '4.5rem', borderRadius: '50%', overflow: 'hidden', border: '3px solid #222' }}>
+              <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=300&q=80" alt="Album Art" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
           </div>
         </div>
         <div className="project-card" style={{ minHeight: 'auto', flex: 1 }}>
@@ -74,7 +75,7 @@ export default function Projects() {
             <button className="info-btn">Info</button>
           </div>
           <div className="card-content bg-black">
-             <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80" alt="Movie Still" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
+            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80" alt="Movie Still" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
           </div>
         </div>
       </div>

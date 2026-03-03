@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { ArrowRight, ArrowDown } from 'lucide-react';
+import '../styles/Hero.scss';
 
 export default function Hero() {
   useEffect(() => {
@@ -87,7 +88,7 @@ export default function Hero() {
 
           <div className="main-card">
             <div className="gradient-overlay"></div>
-            
+
             <div className="code-overlay">
               <div className="inner">
                 {'</>'}

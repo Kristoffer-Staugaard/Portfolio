@@ -1,0 +1,466 @@
+/* Services Grid */
+.services-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0a0a0a;
+    border-radius: 0.75rem 0.75rem 0 0;
+    margin-top: 1.5rem;
+    padding: 2rem;
+    gap: 2rem;
+
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            height: 500px;
+        }
+    }
+
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        background-color: #171717;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.75rem;
+        padding: 0.375rem;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        overflow: hidden;
+
+        &.default {
+            flex: 1;
+            min-height: 400px;
+
+            @media (min-width: 1024px) {
+                min-height: auto;
+            }
+        }
+
+        &.expanded {
+            flex: 3;
+            min-height: 500px;
+
+            @media (max-width: 1023px) {
+                height: 500px;
+            }
+        }
+
+        &.collapsed {
+            flex: 0 0 80px;
+            min-height: 80px;
+
+            @media (min-width: 1024px) {
+                min-height: auto;
+                flex: 0 0 90px;
+            }
+        }
+
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+
+            .card-inner {
+                .default-title h3 {
+                    transform: translateX(4px);
+                }
+            }
+
+            /* Branding Identity */
+            .starry-bg {
+                opacity: 0.8 !important;
+            }
+
+            .geometry-wrapper {
+
+                .crosshair-h,
+                .crosshair-v {
+                    background-color: #525252 !important;
+                }
+
+                .circle-dashed {
+                    transform: rotate(90deg);
+                    border-color: #737373 !important;
+                }
+
+                .circle-dotted {
+                    transform: rotate(180deg) !important;
+                    border-color: #737373 !important;
+                }
+            }
+
+            .ascii-core {
+                transform: scale(1.1);
+
+                pre {
+                    color: #d4d4d4;
+                }
+            }
+
+            /* Web Design & Dev */
+            .blueprint-bg {
+                background-size: 20px 20px !important;
+            }
+
+            .framing-lines {
+                border-color: #525252 !important;
+            }
+
+            .ascii-matrix {
+                border-color: #737373 !important;
+                transform: translateY(-8px);
+                box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05) !important;
+
+                pre {
+                    color: #d4d4d4 !important;
+                }
+            }
+
+            /* Motion Design */
+            .dense-starfield {
+                opacity: 0.6 !important;
+            }
+
+            .dense-starfield-2 {
+                transform: translate(16px, 16px);
+            }
+
+            .fibo-geometry {
+                border-color: #a3a3a3 !important;
+                transform: scale(1.05);
+
+                .left-square,
+                .top-square,
+                .left-small,
+                .h-4-square {
+                    border-color: #a3a3a3 !important;
+                }
+
+                .arc {
+                    border-color: #d4d4d4 !important;
+                    transform: scale(1.1);
+                }
+
+                .plus {
+                    color: white !important;
+                }
+            }
+
+            .math-note-1,
+            .math-note-2 {
+                opacity: 1 !important;
+            }
+        }
+
+        .card-inner {
+            position: relative;
+            flex: 1;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: #0a0a0a;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.5s ease;
+
+            @media (min-width: 1024px) {
+                flex-direction: row;
+            }
+        }
+
+        .expanded-content {
+            display: none;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            padding: 2rem;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+            white-space: nowrap;
+
+            @media (min-width: 1024px) {
+                width: 50%;
+                padding: 3rem;
+            }
+
+            .expanded-info {
+                opacity: 0;
+                transform: translateX(-10px);
+                transition: opacity 0.5s ease, transform 0.5s ease;
+
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    color: #fff;
+                    margin-bottom: 1rem;
+                    letter-spacing: -0.025em;
+                }
+
+                p {
+                    color: #a3a3a3;
+                    font-size: 0.875rem;
+                    line-height: 1.5;
+                    margin-bottom: 2rem;
+                    white-space: normal;
+                    max-width: 400px;
+                }
+
+                .skills-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    @media (min-width: 640px) {
+                        flex-direction: row;
+                        gap: 2rem;
+                    }
+
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.75rem;
+
+                        li {
+                            color: #737373;
+                            font-size: 0.75rem;
+                            font-family: inherit;
+                        }
+                    }
+                }
+            }
+        }
+
+        .animation-section {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: opacity 0.3s ease;
+            width: 100%;
+            height: 100%;
+
+            @media (min-width: 1024px) {
+                width: 100%;
+            }
+
+            .animation-container {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                z-index: 10;
+                overflow: hidden;
+
+                /* Branding Identity */
+                .starry-bg {
+                    position: absolute;
+                    inset: 0;
+                    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+                    background-size: 12px 12px;
+                    opacity: 0.5;
+                    transition: opacity 1s;
+                }
+
+                .geometry-wrapper {
+
+                    .crosshair-h,
+                    .crosshair-v {
+                        transition: background-color 0.7s;
+                    }
+
+                    .circle-dashed,
+                    .circle-dotted {
+                        transition: all 1s ease-in-out;
+                    }
+                }
+
+                .ascii-core {
+                    position: relative;
+                    z-index: 10;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: transform 0.7s;
+
+                    pre {
+                        font-family: monospace;
+                        font-size: 6px;
+                        line-height: 6px;
+                        color: #737373;
+                        text-align: center;
+                        user-select: none;
+                        transition: color 0.5s;
+                    }
+                }
+
+                /* Web Design & Dev */
+                .blueprint-bg {
+                    transition: all 1s ease-in-out;
+                }
+
+                .framing-lines {
+                    transition: border-color 0.7s;
+                }
+
+                .ascii-matrix {
+                    transition: all 0.5s;
+
+                    pre {
+                        transition: color 0.5s;
+                    }
+                }
+
+                /* Motion Design */
+                .dense-starfield {
+                    transition: opacity 1s;
+                }
+
+                .dense-starfield-2 {
+                    transition: transform 2s linear;
+                }
+
+                .fibo-geometry {
+                    transition: all 0.7s ease-out;
+
+                    .left-square,
+                    .top-square,
+                    .left-small,
+                    .h-4-square {
+                        transition: border-color 0.7s;
+                    }
+
+                    .arc {
+                        transition: all 1s;
+                    }
+
+                    .plus {
+                        transition: color 0.5s;
+                    }
+                }
+
+                .math-note-1,
+                .math-note-2 {
+                    opacity: 0;
+                    transition: opacity 0.7s;
+                }
+
+                .math-note-1 {
+                    transition-delay: 100ms;
+                }
+
+                .math-note-2 {
+                    transition-delay: 300ms;
+                }
+            }
+
+            .gradient-bottom {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to top, #0a0a0a, transparent, transparent);
+                pointer-events: none;
+                z-index: 0;
+            }
+
+            .text-content {
+                padding: 1.5rem;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 20;
+
+                h3 {
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    color: #e5e5e5;
+                    letter-spacing: -0.025em;
+                    transition: transform 0.5s;
+                }
+            }
+        }
+
+        .collapsed-title {
+            display: none;
+            position: absolute;
+            inset: 0;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                color: #a3a3a3;
+                font-size: 1rem;
+                letter-spacing: 0.05em;
+                white-space: nowrap;
+                transition: color 0.3s;
+
+                @media (min-width: 1024px) {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+
+        /* States */
+        &.expanded {
+            .expanded-content {
+                display: flex;
+                opacity: 1;
+
+                .expanded-info {
+                    opacity: 1;
+                    transform: translateX(0);
+                    transition-delay: 0.2s;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .animation-section {
+                    width: 50%;
+                    border-left: 1px solid rgba(255, 255, 255, 0.05);
+                }
+            }
+
+            @media (max-width: 1023px) {
+                .animation-section {
+                    display: none;
+                    /* Hide animation on mobile when expanded to fit text */
+                }
+            }
+
+            .default-title {
+                display: none;
+            }
+        }
+
+        &.collapsed {
+            .card-inner {
+                background-color: transparent;
+                border: 1px solid transparent;
+            }
+
+            .expanded-content {
+                display: none;
+            }
+
+            .animation-section {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .collapsed-title {
+                display: flex;
+            }
+
+            &:hover .collapsed-title span {
+                color: #fff;
+            }
+        }
+    }
+}

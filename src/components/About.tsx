@@ -1,8 +1,18 @@
 import { Star, Figma, Framer, Github, Code, Layout, Box } from 'lucide-react';
+import '../styles/About.scss';
 
 export default function About() {
   return (
     <section className="about-grid">
+      <div className="section-header">
+        <div className="sh-label">
+          <span>[ REVIEWS & TOOLKIT ]</span>
+        </div>
+        <div className="sh-content">
+          <h2>Lidt om Staugaard Studio</h2>
+          <p>Jeg er passioneret omkring digitalt håndværk og stræber efter at levere skræddersyede løsninger, der skiller sig ud. Med base i Danmark arbejder jeg med kunder over hele verden for at bringe deres visioner til live.</p>
+        </div>
+      </div>
       {/* Block 1: Testimonial */}
       <div className="testimonial-block">
         <div className="static-card">
@@ -11,7 +21,7 @@ export default function About() {
             <span>Reviews</span>
           </div>
           <h2>STAUGAARD</h2>
-          <p>Building digital experiences<br/>that drive growth</p>
+          <p>Building digital experiences<br />that drive growth</p>
           <div className="stars">
             {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
           </div>
@@ -21,7 +31,7 @@ export default function About() {
         <div className="marquee-area">
           <div className="fade-left"></div>
           <div className="fade-right"></div>
-          
+
           <div className="marquee-scroll">
             {/* Group 1 */}
             <div className="marquee-group">

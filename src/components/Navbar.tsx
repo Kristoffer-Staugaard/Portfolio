@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import '../styles/Navbar.scss';
 
 export default function Navbar() {
   return (

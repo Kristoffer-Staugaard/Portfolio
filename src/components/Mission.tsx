@@ -1,3 +1,5 @@
+import '../styles/Mission.scss';
+
 export default function Mission() {
   return (
     <section className="mission">
