@@ -12,17 +12,37 @@ const SERVICES_DATA = [
       ['UX Design / Research', 'UX Copywriting', 'Creative Direction']
     ],
     animation: (
-      <div className="animation-container">
+      <div className="animation-container branding-anim">
         <div className="starry-bg"></div>
-        <div className="geometry-wrapper" style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div className="crosshair-h" style={{ position: 'absolute', width: '100%', height: '1px', backgroundColor: '#262626' }}></div>
-          <div className="crosshair-v" style={{ position: 'absolute', height: '100%', width: '1px', backgroundColor: '#262626' }}></div>
-          <div className="circle-dashed" style={{ position: 'absolute', width: '11rem', height: '11rem', borderRadius: '50%', border: '1px dashed #404040' }}></div>
-          <div className="circle-dotted" style={{ position: 'absolute', width: '11rem', height: '11rem', borderRadius: '50%', border: '1px dotted #404040', transform: 'rotate(45deg)' }}></div>
-          <div className="ascii-core">
-            <pre>
-              {`      .,:;;;;;;;;;;;;;;:,.      \n   .,:;;;;;;;;;;;;;;;;;;;;:,.   \n  .:;;;;;;;;;;;;;;;;;;;;;;;;;:.  \n .:;;;;;;;;;;;;;;;;;;;;;;;;;;;:. \n :;;;;;;;;;;;;;;;;;;;;;;;;;;;;;: \n :;;;;;;;;;;;;;;;;;;;;;;;;;;;;;: \n :;;;;;;;;;;;;;;;;;;;;;;;;;;;;;: \n ':;;;;;;;;;;;;;;;;;;;;;;;;;;;:' \n  ':;;;;;;;;;;;;;;;;;;;;;;;;;:'  \n   ',:;;;;;;;;;;;;;;;;;;;;:,'   \n      ',:;;;;;;;;;;;;;;:,'      `}
-            </pre>
+        <div className="branding-geometry">
+          {/* Outer rotating rings */}
+          <div className="ring r1"></div>
+          <div className="ring r2"></div>
+          <div className="ring r3"></div>
+
+          {/* Construction lines */}
+          <div className="constr-line h1"></div>
+          <div className="constr-line h2"></div>
+          <div className="constr-line v1"></div>
+          <div className="constr-line v2"></div>
+
+          {/* Typography Spec */}
+          <div className="type-spec">
+            <span className="ts-upper">A</span>
+            <span className="ts-lower">a</span>
+          </div>
+
+          {/* Color Scraps */}
+          <div className="color-swatches">
+            <div className="swatch sw1"></div>
+            <div className="swatch sw2"></div>
+            <div className="swatch sw3"></div>
+          </div>
+
+          {/* Core Logo Shape */}
+          <div className="core-shape-container">
+            <div className="core-shape s1"></div>
+            <div className="core-shape s2"></div>
           </div>
         </div>
       </div>
@@ -38,21 +58,63 @@ const SERVICES_DATA = [
       ['Web Animations', 'Technical SEO', 'Performance Tuning']
     ],
     animation: (
-      <div className="animation-container">
-        <div className="blueprint-bg" style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
-        <div className="geometry-wrapper" style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem' }}>
-          <div className="framing-lines" style={{ position: 'absolute', inset: '1.5rem', border: '1px solid #262626' }}></div>
-          <div className="ascii-matrix" style={{ position: 'relative', zIndex: 10, backgroundColor: '#0a0a0a', border: '1px solid #262626', padding: '0.75rem', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)' }}>
-            <div className="matrix-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #262626', paddingBottom: '0.25rem', marginBottom: '0.5rem' }}>
-              <span style={{ fontSize: '8px', fontFamily: 'monospace', color: '#525252' }}>SYS.DAT</span>
-              <div className="dots" style={{ display: 'flex', gap: '0.25rem' }}>
-                <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#404040' }}></span>
-                <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#404040' }}></span>
+      <div className="animation-container web-anim">
+        <div className="blueprint-bg"></div>
+        <div className="web-geometry">
+          <div className="browser-window">
+            <div className="browser-header">
+              <div className="b-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div className="b-url"></div>
+            </div>
+            <div className="browser-body">
+              <div className="b-sidebar">
+                <div className="b-nav-item active"></div>
+                <div className="b-nav-item"></div>
+                <div className="b-nav-item"></div>
+              </div>
+              <div className="b-content">
+                <div className="b-hero">
+                  <div className="b-img"></div>
+                  <div className="b-text-group">
+                    <div className="b-text tl1"></div>
+                    <div className="b-text tl2"></div>
+                  </div>
+                </div>
+                <div className="b-grid">
+                  <div className="b-card"></div>
+                  <div className="b-card"></div>
+                  <div className="b-card"></div>
+                </div>
               </div>
             </div>
-            <pre style={{ fontSize: '7px', lineHeight: '10px', color: '#737373', letterSpacing: '0.2em' }}>
-              {`+---+---+---+---+\n|...|###|...|...|\n+---+---+---+---+\n|...|...|...|###|\n+---+---+---+---+\n|###|...|...|...|\n+---+---+---+---+\n|...|...|###|...|\n+---+---+---+---+`}
-            </pre>
+          </div>
+
+          <div className="code-editor">
+            <div className="ce-header">
+              <span className="ce-tab">App.tsx</span>
+            </div>
+            <div className="ce-body">
+              <div className="ce-numbers">
+                1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13
+              </div>
+              <pre className="ce-code">
+                {`import { FC } from 'react';
+import { motion } from 'framer-motion';
+
+export const App: FC = () => {
+  return (
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      <System />
+    </motion.div>
+  );
+};`}
+              </pre>
+            </div>
           </div>
         </div>
       </div>
@@ -68,34 +130,71 @@ const SERVICES_DATA = [
       ['Lottie Animations', 'WebGL Experiences', 'Creative Direction']
     ],
     animation: (
-      <div className="animation-container">
-        <div className="dense-starfield" style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,255,255,0.2) 1px, transparent 1px)', backgroundSize: '8px 8px', opacity: 0.3 }}></div>
-        <div className="dense-starfield-2" style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '24px 24px', opacity: 0.5 }}></div>
+      <div className="animation-container motion-anim">
+        <div className="dense-starfield"></div>
+        <div className="motion-geometry">
 
-        <div className="fibo-geometry" style={{ position: 'relative', width: '12rem', height: '8rem', border: '1px solid #404040', display: 'flex', zIndex: 10, backgroundColor: 'rgba(10,10,10,0.5)', backdropFilter: 'blur(4px)' }}>
-          <div className="left-square" style={{ width: '8rem', height: '8rem', borderRight: '1px solid #404040', position: 'relative', overflow: 'hidden' }}>
-            <div className="arc" style={{ position: 'absolute', top: 0, right: 0, width: '16rem', height: '16rem', border: '1px dashed #737373', borderRadius: '50%', transformOrigin: 'top right' }}></div>
-          </div>
-          <div className="right-section" style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-            <div className="top-square" style={{ height: '4rem', borderBottom: '1px solid #404040', position: 'relative', overflow: 'hidden' }}>
-              <div className="arc" style={{ position: 'absolute', bottom: 0, left: 0, width: '8rem', height: '8rem', border: '1px dashed #737373', borderRadius: '50%', transformOrigin: 'bottom left' }}></div>
-            </div>
-            <div className="bottom-section" style={{ flex: 1, display: 'flex' }}>
-              <div className="left-small" style={{ width: '2rem', borderRight: '1px solid #404040', position: 'relative', overflow: 'hidden' }}>
-                <div className="arc" style={{ position: 'absolute', top: 0, right: 0, width: '4rem', height: '4rem', border: '1px dashed #737373', borderRadius: '50%', transformOrigin: 'top right' }}></div>
-              </div>
-              <div className="right-smallest" style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
-                <div className="h-4-square" style={{ height: '1rem', borderBottom: '1px solid #404040', position: 'relative', overflow: 'hidden' }}>
-                  <div className="arc" style={{ position: 'absolute', bottom: 0, left: 0, width: '2rem', height: '2rem', border: '1px dashed #737373', borderRadius: '50%' }}></div>
+          <div className="timeline-panel">
+            <div className="tl-head">
+              <div className="tl-controls">
+                <div className="tl-play">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
                 </div>
-                <div className="plus" style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '6px', color: '#737373', fontFamily: 'monospace' }}>+</div>
+              </div>
+              <div className="tl-ruler">
+                {[...Array(15)].map((_, i) => (
+                  <div key={i} className={`tl-tick ${i % 5 === 0 ? 'major' : ''}`}></div>
+                ))}
               </div>
             </div>
+            <div className="tl-tracks">
+              <div className="tl-track">
+                <span className="track-label">Position</span>
+                <div className="kf kf1"></div>
+                <div className="kf kf2"></div>
+              </div>
+              <div className="tl-track">
+                <span className="track-label">Scale</span>
+                <div className="kf kf3"></div>
+              </div>
+              <div className="tl-track">
+                <span className="track-label">Rotation</span>
+                <div className="kf kf4"></div>
+                <div className="kf kf5"></div>
+              </div>
+            </div>
+            <div className="tl-playhead">
+              <div className="playhead-top"></div>
+              <div className="playhead-line"></div>
+            </div>
           </div>
-        </div>
 
-        <div className="math-note-1" style={{ position: 'absolute', top: '2.5rem', left: '2.5rem', fontSize: '8px', fontFamily: 'monospace', color: '#525252' }}>φ = 1.618</div>
-        <div className="math-note-2" style={{ position: 'absolute', bottom: '2.5rem', right: '2.5rem', fontSize: '8px', fontFamily: 'monospace', color: '#525252' }}>Fn = Fn-1 + Fn-2</div>
+          <div className="bezier-graph">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+              <path d="M 10 90 C 10 10, 90 90, 90 10" fill="none" stroke="#525252" strokeWidth="1" strokeDasharray="2 2" />
+              <path d="M 10 90 C 40 90, 60 10, 90 10" fill="none" stroke="#d4d4d4" strokeWidth="2.5" className="curve-path" />
+              <line x1="10" y1="90" x2="40" y2="90" stroke="#737373" strokeWidth="1" className="handle-line l1" />
+              <line x1="90" y1="10" x2="60" y2="10" stroke="#737373" strokeWidth="1" className="handle-line l2" />
+              <circle cx="10" cy="90" r="2.5" fill="#a3a3a3" />
+              <circle cx="90" cy="10" r="2.5" fill="#a3a3a3" />
+              <circle cx="40" cy="90" r="2.5" fill="#e5e5e5" className="handle-pt h1" />
+              <circle cx="60" cy="10" r="2.5" fill="#e5e5e5" className="handle-pt h2" />
+            </svg>
+          </div>
+
+          <div className="motion-stage">
+            <div className="stage-object"></div>
+            <div className="stage-ghost g1"></div>
+            <div className="stage-ghost g2"></div>
+            <div className="stage-ghost g3"></div>
+            <svg className="stage-path" viewBox="0 0 200 100">
+              <path d="M 20 80 Q 100 0, 180 80" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" strokeDasharray="4 4" />
+            </svg>
+          </div>
+
+        </div>
       </div>
     )
   }
@@ -149,7 +248,6 @@ export default function Services() {
 
               <div className="animation-section">
                 {service.animation}
-                <div className="gradient-bottom"></div>
                 <div className="text-content default-title">
                   <h3>{service.title}</h3>
                 </div>
